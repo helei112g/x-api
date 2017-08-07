@@ -1,5 +1,5 @@
 <?php
-namespace X-api\Modules\Cli\Tasks;
+namespace XApi\Modules\Cli\Tasks;
 
 class VersionTask extends \Phalcon\Cli\Task
 {

@@ -1,5 +1,5 @@
 <?php
-namespace X-api\Modules\Cli;
+namespace XApi\Modules\Cli;
 
 use Phalcon\DiInterface;
 use Phalcon\Loader;
@@ -17,7 +17,7 @@ class Module implements ModuleDefinitionInterface
         $loader = new Loader();
 
         $loader->registerNamespaces([
-            'X-api\Modules\Cli\Tasks' => __DIR__ . '/tasks/',
+            'XApi\Modules\Cli\Tasks' => __DIR__ . '/tasks/',
         ]);
 
         $loader->register();

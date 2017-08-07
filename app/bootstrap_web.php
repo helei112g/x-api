@@ -45,7 +45,16 @@ try {
      * Register application modules
      */
     $application->registerModules([
-        'frontend' => ['className' => 'X-api\Modules\Frontend\Module'],
+        // 前台api ，用模块进行版本控制
+        'v1' => [
+            'className' => 'X-api\Modules\V1\Module',
+            'path'      => APP_PATH . '/modules/v1/Module.php',
+        ],
+        // 后端接口
+        'backend' => [
+            'className' => 'X-api\Modules\Backend\Module',
+            'path'      => APP_PATH . '/modules/backend/Module.php',
+        ],
     ]);
 
     /**

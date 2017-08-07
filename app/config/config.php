@@ -11,10 +11,10 @@ return new \Phalcon\Config([
 
     'database' => [
         'adapter'  => 'Mysql',
-        'host'     => 'localhost',
+        'host'     => '192.168.33.10',
         'username' => 'root',
-        'password' => '',
-        'dbname'   => 'x-api',
+        'password' => 'root',
+        'dbname'   => 'xapi',
         'charset'  => 'utf8',
     ],
 
