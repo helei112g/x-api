@@ -5,6 +5,8 @@
 > 前端访问地址：localhost/v1/xx
 >
 >后端访问地址：localhost/back/xx
+>
+>cli 模块，请进入项目跟目录后使用 php run 查看使用帮助信息
 
 # 安装项目
 1. 从 GitHub 获取项目
@@ -37,4 +39,3 @@ composer install
 - `app\common\contracts` 目录存放规范系统编码行为的类，以及常量定义等
 
 
-**注意: 由于我们是接口项目，所有整个项目没有 view 相关的东西**
