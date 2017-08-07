@@ -51,7 +51,7 @@ try {
             'path'      => APP_PATH . '/modules/v1/Module.php',
         ],
         // 后端接口
-        'backend' => [
+        'back' => [
             'className' => 'XApi\Modules\Backend\Module',
             'path'      => APP_PATH . '/modules/backend/Module.php',
         ],

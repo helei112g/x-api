@@ -17,7 +17,7 @@ class MemberAccountMigration_100 extends Migration
      */
     public function morph()
     {
-        $this->morphTable('member_account', [
+        $this->morphTable('member_accounts', [
                 'columns' => [
                     new Column(
                         'account_id',

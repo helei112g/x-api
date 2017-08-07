@@ -2,6 +2,10 @@
 
 项目的创建使用：phalcon create-project x-api modules
 
+> 前端访问地址：localhost/v1/xx
+>
+>后端访问地址：localhost/back/xx
+
 # 安装项目
 1. 从 GitHub 获取项目
 ```php
