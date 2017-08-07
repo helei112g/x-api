@@ -28,8 +28,9 @@ composer install
 # 项目目录说明
 所有项目编码均在 `app` 下面
 
-- `logs` 用来记录文件日志
-- `migrations` 是数据库文件信息
+- `app\logs` 用来记录文件日志
+- `app\migrations` 是数据库文件信息
+- `app\common\contracts` 目录存放规范系统编码行为的类，以及常量定义等
 
 
 **注意: 由于我们是接口项目，所有整个项目没有 view 相关的东西**

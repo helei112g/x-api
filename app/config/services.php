@@ -46,6 +46,10 @@ $di->setShared('modelsMetadata', function () {
 /**
  * Configure the Volt service for rendering .volt templates
  */
+/**
+ * @author: helei
+ * @note：由于我们是接口项目，不需要该组件
+ */
 $di->setShared('voltShared', function ($view) {
     $config = $this->getConfig();
 

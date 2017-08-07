@@ -14,7 +14,7 @@ use Phalcon\Flash\Direct as Flash;
 $di->setShared('router', function () {
     $router = new Router();
 
-    $router->setDefaultModule('frontend');
+    $router->setDefaultModule('v1');
 
     return $router;
 });
@@ -58,6 +58,6 @@ $di->set('flash', function () {
 */
 $di->setShared('dispatcher', function() {
     $dispatcher = new Dispatcher();
-    $dispatcher->setDefaultNamespace('X-api\Modules\Frontend\Controllers');
+    $dispatcher->setDefaultNamespace('XApi\Modules\V1\Controllers');
     return $dispatcher;
 });

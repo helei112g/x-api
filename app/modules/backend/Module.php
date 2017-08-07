@@ -51,36 +51,5 @@ class Module implements ModuleDefinitionInterface
                 $config = $override;
             }
         }
-
-        /**
-         * Setting up the view component
-         */
-        $di['view'] = function () {
-            $config = $this->getConfig();
-
-            $view = new View();
-            $view->setViewsDir($config->get('application')->viewsDir);
-            
-            $view->registerEngines([
-                '.volt'  => 'voltShared',
-                '.phtml' => PhpEngine::class
-            ]);
-
-            return $view;
-        };
-
-        /**
-         * Database connection is created based in the parameters defined in the configuration file
-         */
-        $di['db'] = function () {
-            $config = $this->getConfig();
-
-            $dbConfig = $config->database->toArray();
-
-            $dbAdapter = '\Phalcon\Db\Adapter\Pdo\\' . $dbConfig['adapter'];
-            unset($config['adapter']);
-
-            return new $dbAdapter($dbConfig);
-        };
     }
 }

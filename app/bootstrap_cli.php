@@ -41,7 +41,10 @@ $console = new ConsoleApp($di);
  * Register console modules
  */
 $console->registerModules([
-    'cli' => ['className' => 'X-api\Modules\Cli\Module']
+    'cli' => [
+        'className' => 'XApi\Modules\Cli\Module',
+        'path'      => APP_PATH . '/modules/cli/Module.php',
+    ]
 ]);
 
 /**

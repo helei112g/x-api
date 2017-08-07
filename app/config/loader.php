@@ -8,16 +8,18 @@ $loader = new Loader();
  * Register Namespaces
  */
 $loader->registerNamespaces([
-    'X-api\Models' => APP_PATH . '/common/models/',
-    'X-api'        => APP_PATH . '/common/library/',
+    'XApi\Models' => APP_PATH . '/common/models/',
+    'XApi\Contracts'        => APP_PATH . '/common/contracts/',
+    'XApi\Utils'        => APP_PATH . '/common/utils/',
+    'XApi\Base'        => APP_PATH . '/common/base/',
 ]);
 
 /**
  * Register module classes
  */
 $loader->registerClasses([
-    'X-api\Modules\Frontend\Module' => APP_PATH . '/modules/frontend/Module.php',
-    'X-api\Modules\Cli\Module'      => APP_PATH . '/modules/cli/Module.php'
+    'XApi\Modules\V1\Module' => APP_PATH . '/modules/v1/Module.php',
+    'XApi\Modules\Cli\Module'      => APP_PATH . '/modules/cli/Module.php'
 ]);
 
 $loader->register();

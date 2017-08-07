@@ -7,6 +7,6 @@ use Phalcon\Cli\Dispatcher;
 */
 $di->setShared('dispatcher', function() {
     $dispatcher = new Dispatcher();
-    $dispatcher->setDefaultNamespace('X-api\Modules\Cli\Tasks');
+    $dispatcher->setDefaultNamespace('XApi\Modules\Cli\Tasks');
     return $dispatcher;
 });

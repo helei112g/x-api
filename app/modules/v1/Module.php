@@ -68,19 +68,5 @@ class Module implements ModuleDefinitionInterface
 
             return $view;
         };
-
-        /**
-         * Database connection is created based in the parameters defined in the configuration file
-         */
-        $di['db'] = function () {
-            $config = $this->getConfig();
-
-            $dbConfig = $config->database->toArray();
-
-            $dbAdapter = '\Phalcon\Db\Adapter\Pdo\\' . $dbConfig['adapter'];
-            unset($config['adapter']);
-
-            return new $dbAdapter($dbConfig);
-        };
     }
 }
