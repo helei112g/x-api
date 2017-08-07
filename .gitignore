@@ -1,0 +1,13 @@
+# phpstorm project files
+.idea
+
+.DS_Store
+
+.htaccess
+/cache/
+.phalcon/
+
+tests/_output/*
+/app/logs/
+/vendor/
+/app/env.php

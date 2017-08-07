@@ -1,0 +1,36 @@
+{
+  "name": "x-api",
+  "description": "phalcon-api php7",
+  "type": "project",
+  "minimum-stability": "dev",
+  "authors": [
+    {
+      "name": "HeLei",
+      "email": "dayugog@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "bshaffer/oauth2-server-php": "v1.9.0",
+    "qiniu/php-sdk": "~7.1.0",
+    "riverslei/xmpush": "~1.0.0",
+    "riverslei/payment": "~4.0"
+  },
+  "require-dev": {
+    "codeception/codeception": "*"
+  },
+  "extra": {
+    "writable": [
+      "app/logs"
+    ],
+    "executable": [
+      "run"
+    ]
+  },
+  "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
+        }
+  }
+}
