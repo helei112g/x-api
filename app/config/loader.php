@@ -12,6 +12,7 @@ $loader->registerNamespaces([
     'XApi\Contracts'        => APP_PATH . '/common/contracts/',
     'XApi\Utils'        => APP_PATH . '/common/utils/',
     'XApi\Base'        => APP_PATH . '/common/base/',
+    'XApi\Plugin'        => APP_PATH . '/common/plugin/',
 ]);
 
 /**

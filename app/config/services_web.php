@@ -7,6 +7,8 @@ use Phalcon\Session\Adapter\Files as SessionAdapter;
 use Phalcon\Mvc\View;
 use Phalcon\Mvc\View\Engine\Volt as VoltEngine;
 use Phalcon\Flash\Direct as Flash;
+use Phalcon\Events\Manager as EventsManager;
+use XApi\Plugin\SecurityPlugin;
 
 /**
  * Registering a router
@@ -57,7 +59,19 @@ $di->set('flash', function () {
 * Set the default namespace for dispatcher
 */
 $di->setShared('dispatcher', function() {
+    // Create an events manager
+    $eventsManager = new EventsManager();
+
+    // 权限检查的插件
+    $eventsManager->attach(
+        'dispatch:beforeExecuteRoute',
+        new SecurityPlugin()
+    );
+
     $dispatcher = new Dispatcher();
     $dispatcher->setDefaultNamespace('XApi\Modules\V1\Controllers');
+
+    // Assign the events manager to the dispatcher
+    $dispatcher->setEventsManager($eventsManager);
     return $dispatcher;
 });
