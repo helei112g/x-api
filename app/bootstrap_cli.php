@@ -6,6 +6,9 @@ use Phalcon\Cli\Console as ConsoleApp;
 define('BASE_PATH', dirname(__DIR__));
 define('APP_PATH', BASE_PATH . '/app');
 
+date_default_timezone_set('Asia/Shanghai');// 设置时区
+require APP_PATH . '/env.php';
+
 /**
  * The FactoryDefault Dependency Injector automatically registers the services that
  * provide a full stack framework. These default services can be overidden with custom ones.

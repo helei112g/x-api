@@ -9,14 +9,7 @@ defined('APP_PATH') || define('APP_PATH', BASE_PATH . '/app');
 return new \Phalcon\Config([
     'version' => '1.0',
 
-    'database' => [
-        'adapter'  => 'Mysql',
-        'host'     => '192.168.33.10',
-        'username' => 'root',
-        'password' => 'root',
-        'dbname'   => 'xapi',
-        'charset'  => 'utf8',
-    ],
+    'database' => require('./db.php'),
 
     'application' => [
         'appDir'         => APP_PATH . '/',
@@ -39,5 +32,8 @@ return new \Phalcon\Config([
      *
      * You can disable this behaviour if the output of your application needs to don't have a new line at end
      */
-    'printNewLine' => true
+    'printNewLine' => true,
+
+    // 用户配置信息
+    'params' => require ('./params.php'),
 ]);
