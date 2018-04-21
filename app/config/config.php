@@ -9,7 +9,8 @@ defined('APP_PATH') || define('APP_PATH', BASE_PATH . '/app');
 return new \Phalcon\Config([
     'version' => '1.0',
 
-    'database' => require('./db.php'),
+    'database' => require_once APP_PATH . '/config/db.php',
+    'redis' => require_once APP_PATH . '/config/redis.php',
 
     'application' => [
         'appDir'         => APP_PATH . '/',

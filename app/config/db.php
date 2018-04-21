@@ -11,7 +11,7 @@ if (APP_ENV_PROD) {// 线上
         'adapter'  => 'Mysql',
         'host'     => '192.168.33.10',
         'username' => 'root',
-        'password' => 'e3ewKTImC4tK',
+        'password' => '123123',
         'dbname'   => 'xapi',
         'charset'  => 'utf8',
     ];
@@ -20,7 +20,7 @@ if (APP_ENV_PROD) {// 线上
         'adapter'  => 'Mysql',
         'host'     => '192.168.33.10',
         'username' => 'root',
-        'password' => 'root',
+        'password' => '123123',
         'dbname'   => 'xapi',
         'charset'  => 'utf8',
     ];
@@ -29,7 +29,7 @@ if (APP_ENV_PROD) {// 线上
         'adapter'  => 'Mysql',
         'host'     => '192.168.33.10',
         'username' => 'root',
-        'password' => 'root',
+        'password' => '123123',
         'dbname'   => 'xapi',
         'charset'  => 'utf8',
     ];
