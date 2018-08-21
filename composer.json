@@ -15,7 +15,8 @@
     "qiniu/php-sdk": "~7.1.0",
     "riverslei/xmpush": "~1.0.0",
     "riverslei/payment": "~4.0.0",
-    "predis/predis": "~1.0"
+    "predis/predis": "~1.0",
+    "firebase/php-jwt": "~5.0.0"
   },
   "require-dev": {
     "codeception/codeception": "*"
