@@ -14,6 +14,7 @@ if (APP_ENV_PROD) {// 线上
         'password' => '123123',
         'dbname'   => 'xapi',
         'charset'  => 'utf8',
+        'port'     => 3306,
     ];
 } elseif (APP_ENV_TEST) {// 测试
     return [
@@ -23,6 +24,7 @@ if (APP_ENV_PROD) {// 线上
         'password' => '123123',
         'dbname'   => 'xapi',
         'charset'  => 'utf8',
+        'port'     => 3306,
     ];
 } else {// 开发
     return [
@@ -32,5 +34,6 @@ if (APP_ENV_PROD) {// 线上
         'password' => '123123',
         'dbname'   => 'xapi',
         'charset'  => 'utf8',
+        'port'     => 3306,
     ];
 }
