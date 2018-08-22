@@ -34,6 +34,20 @@ composer install
 # 项目目录说明
 所有项目编码均在 `app` 下面
 
+3. 基本命令
+```php
+# 查看自定义的命令任务
+php run
+
+# 根据表结构生成model
+php run model
+
+# 生成数据库文件信息
+phalocon migration
+```
+
+
+
 - `app\logs` 用来记录文件日志
 - `app\migrations` 是数据库文件信息
 - `app\common\contracts` 目录存放规范系统编码行为的类，以及常量定义等
