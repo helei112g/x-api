@@ -21,6 +21,6 @@ class IndexController extends BaseController
      */
     public function indexAction(): ResultData
     {
-        return new ResultData(ApiCode::SUC, 'ok');
+        return new ResultData(ApiCode::SUC, 'ok', 'v1 controllers');
     }
 }

@@ -36,5 +36,5 @@ return new \Phalcon\Config([
     'printNewLine' => true,
 
     // 用户配置信息
-    'params' => require ('./params.php'),
+    'params' => require_once APP_PATH . '/config/params.php',
 ]);

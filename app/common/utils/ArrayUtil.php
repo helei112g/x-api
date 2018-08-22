@@ -17,11 +17,11 @@ class ArrayUtil
 {
     /**
      * 将传入的数组的值，全部转化为字符串类型，注意检查多维数组的情况
-     * @param array $data
+     * @param array|mixed $data
      * @return array
      * @author helei
      */
-    public static function valueToString(array $data)
+    public static function valueToString($data)
     {
         if (empty($data) || ! is_array($data)) {
             return $data;
