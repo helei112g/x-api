@@ -38,6 +38,16 @@ $di->setShared('db', function () {
 });
 
 /**
+ * 缓存初始化
+ */
+$di->setShared('xCache', function () {
+    $config = $this->getConfig()->toArray();
+
+    $redis = \XApi\Utils\XRedis::getInstance($config);
+    return $redis;
+});
+
+/**
  * If the configuration specify the use of metadata adapter use it or use memory otherwise
  */
 $di->setShared('modelsMetadata', function () {

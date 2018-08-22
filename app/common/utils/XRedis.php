@@ -21,14 +21,15 @@ class XRedis
     private static $instance;
 
     /**
+     * @param array $config
      * @return Client
      * @throws \ErrorException
      */
-    public static function getInstance()
+    public static function getInstance(array $config)
     {
         if (!(self::$instance instanceof self)) {
             try {
-                new self();
+                new self($config);
             } catch (\ErrorException $e) {
                 throw $e;
             }
@@ -40,11 +41,11 @@ class XRedis
     /**
      * 获取redis的链接
      * WRedis constructor.
+     * @param array $config
      * @throws \ErrorException
      */
-    private function __construct()
+    private function __construct(array $config)
     {
-        $config = Di::getDefault()->getConfig()->redis->toArray();
         if (empty($config)) {
             throw new \ErrorException("请提供正确的redis配置", ApiCode::CONFIG_ERR);
         }
