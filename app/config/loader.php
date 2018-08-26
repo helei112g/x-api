@@ -2,6 +2,9 @@
 
 use Phalcon\Loader;
 
+// 加载 vendor 目录的自动加载
+require_once BASE_PATH . "/vendor/autoload.php";
+
 $loader = new Loader();
 
 /**
